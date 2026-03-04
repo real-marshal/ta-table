@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ta-table
+  namespace: temp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ta-table
+  template:
+    metadata:
+      labels:
+        app: ta-table
+    spec:
+      imagePullSecrets:
+        - name: ghcr-credentials
+      containers:
+        - name: ta-table
+          image: ghcr.io/real-marshal/ta-table:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              memory: 512Mi

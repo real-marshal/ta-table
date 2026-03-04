@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ta-table
+  namespace: temp
+spec:
+  selector:
+    app: ta-table
+  ports:
+    - port: 80
+      targetPort: 3000

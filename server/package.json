@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.6"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "typebox": "^1.1.5"
+  }
+}

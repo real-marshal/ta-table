@@ -1,0 +1,9 @@
+{
+  "name": "ta-table",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "typescript": "^5"
+  }
+}
